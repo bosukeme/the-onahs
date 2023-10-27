@@ -1,4 +1,5 @@
 wheel
+dnspython==2.2.1
 dramatiq==1.15.0
 flake8==5.0.4
 Flask==2.3.3
