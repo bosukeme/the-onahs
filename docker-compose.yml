@@ -12,12 +12,11 @@ services:
     env_file:
       - .env
 
-  nginx:
-    build: ./nginx
-    container_name: nginx
-    environment:
-      - SERVER_NAME=0.0.0.0
+  proxy:
+    build: proxy
     restart: always
+    ports:
+      - "80:80"
 
   rabbit:
      hostname: rabbit
