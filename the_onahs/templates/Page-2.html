@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>The Onahs</title>
+    <link rel="stylesheet" href="static/css/nicepage.css" media="screen">
+<link rel="stylesheet" href="/static/css/Page-2.css" media="screen">
+    <script class="u-script" type="text/javascript" src="static/js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="static/js/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.20.7, nicepage.com">
+    <meta name="referrer" content="origin">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Ubuntu:300,300i,400,400i,500,500i,700,700i">
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Site1"
+}</script>
+    <meta name="theme-color" content="#f15048">
+    <meta property="og:title" content="Page 2">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en"> 
+    <section class="skrollable skrollable-between u-align-center u-clearfix u-image u-shading u-section-1" src="" id="carousel_ed7a" data-image-width="1024" data-image-height="1024">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-align-center u-text u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">The Onahs</h1>
+        <p class="u-align-center u-text u-text-white u-text-2">Sample text. Click to select the Text Element.</p>
+      </div>
+    </section>
+    <section class="u-align-left u-clearfix u-white u-section-2" id="carousel_02ec">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">Kindly Share your NIFES Story with the Onahs</h2>
+        <div class="u-form u-form-1">
+          <form action="/comment" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1" style="padding: 10px;">
+            <div class="u-form-group u-form-name">
+              <label for="name-8928" class="u-label">Name</label>
+              <input type="text" placeholder="Enter your Name" id="name-8928" name="name" class="u-input u-input-rectangle" required="">
+            </div>
+            <div class="u-form-group u-form-name">
+              <label for="name-8928" class="u-label">Email</label>
+              <input type="text" placeholder="Enter your email" id="name-8928" name="email" class="u-input u-input-rectangle" required="">
+            </div>
+            <div class="u-form-group u-form-message">
+              <label for="message-8928" class="u-label">Message</label>
+              <textarea placeholder="Enter your message" rows="4" cols="50" id="message-8928" name="message" class="u-input u-input-rectangle" required=""></textarea>
+            </div>
+            <div class="u-align-left u-form-group u-form-submit">
+              <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
+              <input type="submit" value="submit" class="u-form-control-hidden">
+            </div>
+            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+            <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+            <input type="hidden" value="" name="recaptchaResponse">
+            <input type="hidden" name="formServices" value="038ac7cea9ce664cc73c9b1b52338161">
+          </form>
+        </div>
+        <h6 class="u-align-left u-custom-font u-font-open-sans u-text u-text-2">{{ comments_count }} comment(s)</h6>
+        {%  for comment in comments %}
+        <h6 style="text-transform: capitalize;" class="u-align-left u-custom-font u-font-open-sans u-text u-text-3"> <b> {{ comment['name'] }} </b></h6>
+        <p class="u-align-left u-text u-text-4">{{ comment['email'] }}</p>
+        <p class="u-align-left u-text u-text-4">{{ comment['comment_date'] }}</p>
+        <blockquote class="u-align-left u-text u-text-5">{{ comment['comment'] }}
+        </blockquote>
+        {% endfor %}
+      </div>
+    </section>
+  
+</body></html>

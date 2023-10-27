@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+
+  website:
+    build: .
+    restart: always
+    volumes:
+      - '.:/the_onahs'
+    ports:
+      - '5000:5000'
+    env_file:
+      - .env
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    environment:
+      - SERVER_NAME=0.0.0.0
+    restart: always
+
+  rabbit:
+     hostname: rabbit
+     image: "rabbitmq:3-management"
+     environment:
+       - RABBITMQ_DEFAULT_USER=guest
+       - RABBITMQ_DEFAULT_PASS=guest
+       - RABBITMQ_DEFAULT_VHOST=the_onahs
+     ports:
+       - "15672:15672"
+       - "5672:5672"
+
+volumes:
+  rabbit:
